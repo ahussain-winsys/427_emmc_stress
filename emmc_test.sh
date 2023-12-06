@@ -5,9 +5,10 @@ sleep 5
 current_datetime=$(date +"%Y-%m-%d_%H-%M-%S")
 
 # Define the output file
-output_file="log.txt"
-output_file2="stress.txt"
-output_file3="dmesg.txt"
+wd="$PWD"
+output_file="$wd/log.txt"
+output_file2="$wd/stress.txt"
+output_file3="$wd/dmesg.txt"
 echo "$current_datetime" >> "$output_file"
 echo "$current_datetime" >> "$output_file2"
 
